@@ -7,12 +7,12 @@ $isValid  = json_validate($fileData);
 
 if ($isValid) {
     // Convert to a list of objects
-    $jsonData = json_decode($fileData);
-    //dump($jsonData[0]);
+    $phpData = json_decode($fileData);
+    //dump($phpData[0]);
 
     // Convert to a list of arrays
-    $jsonData = json_decode($fileData, true);
-    //dump($jsonData);
+    $phpData = json_decode($fileData, true);
+    //dump($phpData);
 
     // Convert array to JSON and save to a file
     $result = file_put_contents(__DIR__ . '/added-users.json', json_encode($jsonData));
